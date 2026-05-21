@@ -1,33 +1,74 @@
 extends CharacterBody2D
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 100.0
-var direction
-#const JUMP_VELOCITY = -400.0
+const TILE_W := 18.0
+const TILE_H := 9.0
+const MOVE_TIME := 0.28
+const BOB_AMOUNT := 2.0
+
+var moving := false
+var sprite_start_y := 0.0
+
+var iso_dirs := {
+	"right": Vector2(TILE_W / 2.0, TILE_H / 2.0),
+	"left": Vector2(-TILE_W / 2.0, -TILE_H / 2.0),
+	"up": Vector2(TILE_W / 2.0, -TILE_H / 2.0),
+	"down": Vector2(-TILE_W / 2.0, TILE_H / 2.0),
+}
+
+func _ready() -> void:
+	sprite_start_y = sprite.position.y
 
 
 func _physics_process(delta: float) -> void:
-	direction = Input.get_vector("up", "left", "right", "down")
-	if direction != Vector2.ZERO:
-		velocity = direction * 18.0
+	if moving:
+		return
+
+	var direction_name := get_pressed_direction()
+
+	if direction_name != "":
+		move_tile(direction_name)
 	else:
-		velocity = Vector2.ZERO
-	move_and_slide()
-	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
-#
-	## Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") : #and is_on_floor()
-		#target_pos = position+Vector2(9,4.5)
-		#if position != target_pos:
-			#velocity+=Vector2(3,1.5)
-	## Get the input direction and handle the movement/deceleration.
-	## As good practice, you should replace UI actions with custom gameplay actions.
-	##var direction := Input.get_axis("ui_left", "ui_right")
-	##if direction:
-		##velocity.x = direction * SPEED
-	##else:
-		##velocity.x = move_toward(velocity.x, 0, SPEED)
-#
-	#move_and_slide()
+		sprite.pause()
+
+
+func get_pressed_direction() -> String:
+	if Input.is_action_just_pressed("right"):
+		return "right"
+	elif Input.is_action_just_pressed("left"):
+		return "left"
+	elif Input.is_action_just_pressed("up"):
+		return "up"
+	elif Input.is_action_just_pressed("down"):
+		return "down"
+
+	return ""
+
+
+func move_tile(direx: String) -> void:
+	var move_offset: Vector2 = iso_dirs[direx]
+	var target_pos: Vector2 = global_position + move_offset
+
+	if test_move(global_transform, move_offset):
+		return
+
+	moving = true
+	sprite.play(direx)
+
+	var tween := create_tween()
+	tween.set_parallel(true)
+
+	tween.tween_property(self, "global_position", target_pos, MOVE_TIME)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN_OUT)
+
+	tween.tween_property(sprite, "position:y", sprite_start_y - BOB_AMOUNT, MOVE_TIME / 2.0)
+	tween.tween_property(sprite, "position:y", sprite_start_y, MOVE_TIME / 2.0)\
+		.set_delay(MOVE_TIME / 2.0)
+
+	await tween.finished
+
+	global_position = target_pos
+	sprite.position.y = sprite_start_y
+	moving = false
