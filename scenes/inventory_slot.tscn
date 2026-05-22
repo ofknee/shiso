@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://mr7x0yixrmho"]
+
+[ext_resource type="Texture2D" uid="uid://bju7wd4ccitwv" path="res://assets/ui/powers:inventory/inventory_slot.png" id="1_bxqf6"]
+[ext_resource type="Script" uid="uid://bmdcf31qvrepa" path="res://scenes/scripts/inventory_slot.gd" id="1_hddt5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bxqf6"]
+load_path = "res://.godot/imported/inventory_slot.png-3751a910bbda02ced620728610dfe54e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hddt5"]
+load_path = "res://.godot/imported/inventory_slot_click.png-e06dd7e5e4596b27a130f39f119ec04e.ctex"
+
+[node name="inventory_slot" type="CenterContainer" unique_id=1996084076]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hddt5")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=625995819]
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_bxqf6")
+texture_pressed = SubResource("CompressedTexture2D_hddt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246957969]
+visible = false
+texture = ExtResource("1_bxqf6")
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]

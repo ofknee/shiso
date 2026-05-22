@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnp5ixa5ugvoa"]
 
 [ext_resource type="Texture2D" uid="uid://cineb437jv5op" path="res://icon.svg" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://25ak4aoqcl2n" path="res://scenes/player.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://25ak4aoqcl2n" path="res://scenes/scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://cr8gphajy5fwv" path="res://assets/player/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://rb4oaueqxnrm" path="res://assets/player/shadow.png" id="3_dqkch"]
+[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://scenes/shadow.tscn" id="4_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 2.0
@@ -224,20 +224,6 @@ scale = Vector2(0.5, 0.5)
 motion_mode = 1
 script = ExtResource("1_qhqgy")
 
-[node name="Shadow" type="Sprite2D" parent="." unique_id=2146770358]
-modulate = Color(0.42557132, 0.42557135, 0.42557132, 0.36078432)
-z_index = -1
-position = Vector2(-0.99999964, 1.9999999)
-scale = Vector2(1.9999999, 1.3333333)
-texture = ExtResource("3_dqkch")
-
-[node name="Shadow2" type="Sprite2D" parent="." unique_id=77073989]
-modulate = Color(0.23137255, 0.23137255, 0.23137255, 0.5568628)
-z_index = -1
-position = Vector2(-1, 1.9999996)
-scale = Vector2(1.5555555, 0.888889)
-texture = ExtResource("3_dqkch")
-
 [node name="Icon" type="Sprite2D" parent="." unique_id=374292778]
 visible = false
 modulate = Color(1, 1, 1, 0.57254905)
@@ -247,6 +233,8 @@ texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1153100954]
 shape = SubResource("CircleShape2D_qhqgy")
+
+[node name="shadow" parent="." unique_id=827207887 instance=ExtResource("4_dqkch")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=13135088]
 position = Vector2(0, -12)

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dyfkuaf6jvl52"]
+
+[ext_resource type="Script" uid="uid://dqivf0h6gjv1p" path="res://scenes/scripts/item.gd" id="1_6muww"]
+[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://scenes/shadow.tscn" id="2_vljjh"]
+[ext_resource type="Texture2D" uid="uid://bxhtpk2qy38wf" path="res://assets/ui/powers:inventory/items16x16.png" id="3_ro5b8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7wrs"]
+radius = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6muww"]
+atlas = ExtResource("3_ro5b8")
+region = Rect2(52, 27, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vljjh"]
+atlas = ExtResource("3_ro5b8")
+region = Rect2(39, 40, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro5b8"]
+atlas = ExtResource("3_ro5b8")
+region = Rect2(52, 40, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d265e"]
+atlas = ExtResource("3_ro5b8")
+region = Rect2(39, 53, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vp5n"]
+atlas = ExtResource("3_ro5b8")
+region = Rect2(52, 53, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08kqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6muww")
+}],
+"loop": true,
+"name": &"bomb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vljjh")
+}],
+"loop": true,
+"name": &"diams",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro5b8")
+}],
+"loop": true,
+"name": &"emz",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d265e")
+}],
+"loop": true,
+"name": &"health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vp5n")
+}],
+"loop": true,
+"name": &"health_blue",
+"speed": 5.0
+}]
+
+[node name="item" type="Area2D" unique_id=971453052]
+z_index = 2
+scale = Vector2(0.8, 0.8)
+priority = -1
+script = ExtResource("1_6muww")
+
+[node name="shadow" parent="." unique_id=827207887 instance=ExtResource("2_vljjh")]
+modulate = Color(1, 1, 1, 0.49803922)
+position = Vector2(0.5, -1.25)
+scale = Vector2(0.5, 0.625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551262097]
+position = Vector2(0, -0.8000009)
+shape = SubResource("CircleShape2D_j7wrs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=527133940]
+position = Vector2(0, -5.500002)
+sprite_frames = SubResource("SpriteFrames_08kqv")
+animation = &"bomb"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

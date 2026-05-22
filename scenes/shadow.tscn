@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1d1x2mdx68u7"]
+
+[ext_resource type="Texture2D" uid="uid://rb4oaueqxnrm" path="res://assets/player/shadow.png" id="1_0rvn4"]
+
+[node name="shadow" type="Node2D" unique_id=827207887]
+position = Vector2(1, 0)
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=2025288872]
+modulate = Color(0.42557132, 0.42557135, 0.42557132, 0.36078432)
+z_index = -1
+position = Vector2(-0.99999964, 1.9999999)
+scale = Vector2(1.9999999, 1.3333333)
+texture = ExtResource("1_0rvn4")
+
+[node name="Shadow2" type="Sprite2D" parent="." unique_id=1774471022]
+modulate = Color(0.23137255, 0.23137255, 0.23137255, 0.5568628)
+z_index = -1
+position = Vector2(-1, 1.9999996)
+scale = Vector2(1.5555555, 0.888889)
+texture = ExtResource("1_0rvn4")
