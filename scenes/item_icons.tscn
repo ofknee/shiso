@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dfdu8d65ehcg0"]
+
+[ext_resource type="Texture2D" uid="uid://bxhtpk2qy38wf" path="res://assets/ui/powers:inventory/items16x16.png" id="1_umqch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6muww"]
+atlas = ExtResource("1_umqch")
+region = Rect2(52, 27, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4387"]
+atlas = ExtResource("1_umqch")
+region = Rect2(0, 40, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0cwl"]
+atlas = ExtResource("1_umqch")
+region = Rect2(13, 40, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vljjh"]
+atlas = ExtResource("1_umqch")
+region = Rect2(0, 53, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vp5n"]
+atlas = ExtResource("1_umqch")
+region = Rect2(52, 53, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08kqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6muww")
+}],
+"loop": true,
+"name": &"bomb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4387")
+}],
+"loop": true,
+"name": &"diams",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0cwl")
+}],
+"loop": true,
+"name": &"emz",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vljjh")
+}],
+"loop": true,
+"name": &"health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vp5n")
+}],
+"loop": true,
+"name": &"health_blue",
+"speed": 5.0
+}]
+
+[node name="item_icons" type="AnimatedSprite2D" unique_id=897164623]
+light_mask = 2
+sprite_frames = SubResource("SpriteFrames_08kqv")
+animation = &"health"

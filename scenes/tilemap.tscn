@@ -220,7 +220,7 @@ script = ExtResource("3_fofut")
 
 [node name="items" type="TileMapLayer" parent="." unique_id=257840789]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAIAAQAAAAAAAQD8/wAAAQAAAAAAAQD///7/AQAAAAAAAQD+/wMAAQAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAFAAEAAQAAAAAAAQD///v/AQAAAAAAAQD6//7/AQAAAAAAAQD+/wUAAQAAAAAAAQA=")
 tile_set = SubResource("TileSet_fofut")
 
 [node name="level3" type="TileMapLayer" parent="." unique_id=234884053]

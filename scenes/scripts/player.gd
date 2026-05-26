@@ -6,7 +6,9 @@ const TILE_W := 18.0
 const TILE_H := 9.0
 const MOVE_TIME := 0.28
 const BOB_AMOUNT := 2.0
+const DELAY := 0.1
 
+var inventory = global_vars.inv
 var moving := false
 var sprite_start_y := 0.0
 
@@ -34,13 +36,13 @@ func _physics_process(delta: float) -> void:
 
 
 func get_pressed_direction() -> String:
-	if Input.is_action_just_pressed("right"):
+	if Input.is_action_pressed("right"):
 		return "right"
-	elif Input.is_action_just_pressed("left"):
+	elif Input.is_action_pressed("left"):
 		return "left"
-	elif Input.is_action_just_pressed("up"):
+	elif Input.is_action_pressed("up"):
 		return "up"
-	elif Input.is_action_just_pressed("down"):
+	elif Input.is_action_pressed("down"):
 		return "down"
 
 	return ""
@@ -71,4 +73,11 @@ func move_tile(direx: String) -> void:
 
 	global_position = target_pos
 	sprite.position.y = sprite_start_y
+
+	await get_tree().create_timer(DELAY).timeout
+
 	moving = false
+	
+	var inventory_output = ""
+	for i in inventory.size(): inventory_output += inventory[i].type
+	print(inventory_output)

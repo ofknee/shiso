@@ -1,18 +1,13 @@
-extends CenterContainer
+extends Node
 
-const SIZE_CAP = 1.5
-var size_speed = 0.1
+var inv : Array[GlobalItem] = []
+var state
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-#
-#func _on_texture_button_mouse_entered() -> void:
-	#size_speed += Vector2(0.1,0.1)
-	#$TextureButton.size += Vector2(size_speed)
