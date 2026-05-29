@@ -5,25 +5,15 @@ var time = 0
 var frequency := 2.0
 var rounding := 0.5
 var bob
+
+var inventory = GlobalItem.inv
 var item = GlobalItem.new()
-
-
-var inventory = global_vars.inv
-
 @onready var anim = $item_icons
 @onready var og_pos = anim.get_position()
 
-var item_options = [
-	"bomb",
-	"diams",
-	"emz",
-	"health",
-	"health_blue"
-]
-
 func _ready() -> void:
-	
-	item.type = item_options[randi() % item_options.size()]
+	var types = GlobalItem.INFO.keys()
+	item.type = types[randi() % types.size()]
 	anim.play(item.type)
 
 func _process(delta : float) -> void:

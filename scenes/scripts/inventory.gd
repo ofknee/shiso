@@ -1,6 +1,6 @@
 extends MarginContainer
 
-var inventory = global_vars.inv
+#var inventory = global_item.inv
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

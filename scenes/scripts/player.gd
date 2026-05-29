@@ -4,11 +4,11 @@ extends CharacterBody2D
 
 const TILE_W := 18.0
 const TILE_H := 9.0
-const MOVE_TIME := 0.28
+var move_time := 0.14 # TODO - change back to 0.28
 const BOB_AMOUNT := 2.0
-const DELAY := 0.1
+const DELAY := 0.03 # TODO - change back to 0.1 when done testing?
 
-var inventory = global_vars.inv
+var inventory = GlobalItem.inv
 var moving := false
 var sprite_start_y := 0.0
 
@@ -61,13 +61,13 @@ func move_tile(direx: String) -> void:
 	var tween := create_tween()
 	tween.set_parallel(true)
 
-	tween.tween_property(self, "global_position", target_pos, MOVE_TIME)\
+	tween.tween_property(self, "global_position", target_pos, move_time)\
 		.set_trans(Tween.TRANS_SINE)\
 		.set_ease(Tween.EASE_IN_OUT)
 
-	tween.tween_property(sprite, "position:y", sprite_start_y - BOB_AMOUNT, MOVE_TIME / 2.0)
-	tween.tween_property(sprite, "position:y", sprite_start_y, MOVE_TIME / 2.0)\
-		.set_delay(MOVE_TIME / 2.0)
+	tween.tween_property(sprite, "position:y", sprite_start_y - BOB_AMOUNT, move_time / 2.0)
+	tween.tween_property(sprite, "position:y", sprite_start_y, move_time / 2.0)\
+		.set_delay(move_time / 2.0)
 
 	await tween.finished
 
@@ -78,6 +78,3 @@ func move_tile(direx: String) -> void:
 
 	moving = false
 	
-	var inventory_output = ""
-	for i in inventory.size(): inventory_output += inventory[i].type
-	print(inventory_output)

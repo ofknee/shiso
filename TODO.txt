@@ -1,0 +1,9 @@
+_--TODO--_
+
+health bar
+energy bar?
+power ups
+enemies
+figureout how delete inventory
+add todo.md to gitignore
+make game states

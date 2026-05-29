@@ -54,6 +54,7 @@ shape = SubResource("CircleShape2D_j7wrs")
 
 [node name="item_icons" parent="." unique_id=897164623 instance=ExtResource("4_vljjh")]
 position = Vector2(0, -5.500002)
+animation = &"health_blue"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
