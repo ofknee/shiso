@@ -17,11 +17,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if index <= (inventory.size()-1):
-		if inventory[index] != item:
+		if inventory[index] != item: #FIXME Invalid access of index '-1' on a base object of type: 'Array[GlobalItem]'.
 			item = inventory[index]
 			#icon.play(item.type)
-			icon.play(item.type)
 			icon.show() 
+			# icon.play(item.type)#FIXME
 			_get_tooltip(Vector2.ZERO)
 			
 			
@@ -36,7 +36,7 @@ func _on_texture_button_mouse_entered() -> void:
 	if item:
 		#pass
 		#print("hi")
-		print(item.type + " • " + item.desc[item.type]) #FIXME ITEM TYPE
+		print(GlobalItem.INFO[item.type]["name"] , " • " , GlobalItem.INFO[item.type]["desc"])
 	#pass# Replace with function body.
 	#TODO - popup description on hover
 	

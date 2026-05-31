@@ -23,6 +23,7 @@ func _ready() -> void:
 	sprite_start_y = sprite.position.y
 
 
+
 func _physics_process(delta: float) -> void:
 	if moving:
 		return

@@ -1,9 +1,10 @@
 _--TODO--_
-
 health bar
 energy bar?
 power ups
 enemies
-figureout how delete inventory
-add todo.md to gitignore
-make game states
+figureout how delete inventory.gd
+use inventory items
+add todo.md to gitignore #nvm doesn't mattter
+make game states 
+stats checker
