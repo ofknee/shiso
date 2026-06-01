@@ -54,17 +54,29 @@ const INFO: Dictionary = {
 }
 
 func _ready() -> void:
-	pass
+	computah_randomize_it_pls()
 
 #pick weightedly random power up/item? if it works 
-static func computah_randomize_it_pls():
+func computah_randomize_it_pls():
 	var rng = RandomNumberGenerator.new()
-	var types = INFO.keys()[randi() % INFO.size()]
+	var types = INFO.keys()#[randi() % INFO.size()]
 	var weights := []
-	weights.resize(INFO.size())
+	weights.resize(types.size()) #THIS LINE WAS :DLKFJKFJDKFJLKSDFJSKLDFKLDSJJDFKLSFJKLDSKLFDKLJDFFKJLDS
+	var index = 0
 	for elem in INFO.values():
-		weights.append(elem["stats"]["weight"])
-	print(types[rng.rand_weighted(weights)])
+		#index = types.index(elem)
+		weights[index] = (elem["stats"]["weight"])
+		#print(elem)
+		index+=1#++1
+	#print("hi",weights)
+
+	weights = PackedFloat32Array(weights)
+	#print(types.size())
+	#print(weights)
+	#print(weights.size())
+	type = (types[rng.rand_weighted(weights)])
+	print("type — "+type)
 		
 		
 	
+#get not ()

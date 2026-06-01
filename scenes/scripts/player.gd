@@ -2,11 +2,13 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+const SPEED := 1.0
+
 const TILE_W := 18.0
 const TILE_H := 9.0
-var move_time := 0.14 # TODO - change back to 0.28
-const BOB_AMOUNT := 2.0
-const DELAY := 0.03 # TODO - change back to 0.1 when done testing?
+var move_time := 0.28/SPEED # TODO - change back to 0.28
+const BOB_AMOUNT := 2.0/SPEED
+const DELAY := 0.1/SPEED # TODO - change back to 0.1 when done testing?
 
 var inventory = GlobalItem.inv
 var moving := false

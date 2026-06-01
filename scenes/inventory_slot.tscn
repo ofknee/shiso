@@ -23,6 +23,8 @@ stretch_mode = 0
 [node name="item_icons" parent="TextureButton" unique_id=897164623 instance=ExtResource("4_c13kb")]
 position = Vector2(17, 16)
 scale = Vector2(1.74, 1.74)
+animation = &"bomb"
+autoplay = "bomb"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=246957969]
 visible = false

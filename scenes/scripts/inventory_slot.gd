@@ -9,7 +9,7 @@ var icon
 func _ready() -> void:
 	index = int(name.split("_")[-1]) - 1
 	icon = $TextureButton/item_icons
-	icon.hide()
+	icon.hide() #null index???
 	
 	#print("index", index) // 1 - 10
 
@@ -19,9 +19,11 @@ func _process(delta: float) -> void:
 	if index <= (inventory.size()-1):
 		if inventory[index] != item: #FIXME Invalid access of index '-1' on a base object of type: 'Array[GlobalItem]'.
 			item = inventory[index]
-			#icon.play(item.type)
 			icon.show() 
-			# icon.play(item.type)#FIXME
+			icon.play(item.type)
+			
+
+			#icon.play(item.type)#FIXME
 			_get_tooltip(Vector2.ZERO)
 			
 			
@@ -32,7 +34,7 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_mouse_entered() -> void:
-	icon.show()
+	#icon.show()
 	if item:
 		#pass
 		#print("hi")

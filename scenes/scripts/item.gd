@@ -13,16 +13,21 @@ var item = GlobalItem.new()
 
 func _ready() -> void:
 	var types = GlobalItem.INFO.keys()
-	item.type = types[randi() % types.size()]
+	item.computah_randomize_it_pls()
+	#item.type = types[randi() % types.size()]
 	anim.play(item.type)
-	add_to_group("items") 
+	print(item.type + "...")
+	print(anim.animation)
+
+	#add_to_group("items") 
 
 
 func _process(delta : float) -> void:
 	time += delta * frequency
 	bob = round(sin(time) * amplitude / rounding) * rounding
 	anim.set_position(og_pos + Vector2(0, bob))
-	anim.play(item.type)#FIXME
+	#anim.play(item.type)#FIXME
+#	print("item.type" + item.type)
 
 
 pass # Replace with function body.

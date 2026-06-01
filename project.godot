@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 global_item="*uid://bepjdm5epf4is"
-global_vars="*uid://boy5nj1yidr8b"
 
 [display]
 

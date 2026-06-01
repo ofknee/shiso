@@ -22,10 +22,6 @@ region = Rect2(52, 40, 13, 13)
 atlas = ExtResource("1_umqch")
 region = Rect2(13, 40, 13, 13)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0udms"]
-atlas = ExtResource("1_umqch")
-region = Rect2(0, 53, 13, 13)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_5vp5n"]
 atlas = ExtResource("1_umqch")
 region = Rect2(52, 53, 13, 13)
@@ -34,6 +30,10 @@ region = Rect2(52, 53, 13, 13)
 atlas = ExtResource("1_umqch")
 region = Rect2(13, 53, 13, 13)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0udms"]
+atlas = ExtResource("1_umqch")
+region = Rect2(0, 53, 13, 13)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_08kqv"]
 animations = [{
 "frames": [{
@@ -41,7 +41,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_6gqc1")
 }],
 "loop": true,
-"name": &"bomb",
+"name": &"bomb_gray",
 "speed": 5.0
 }, {
 "frames": [{
@@ -52,7 +52,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_me1pa")
 }],
 "loop": true,
-"name": &"diams",
+"name": &"gem_blue",
 "speed": 0.5
 }, {
 "frames": [{
@@ -63,16 +63,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_gwjes")
 }],
 "loop": true,
-"name": &"emz",
+"name": &"gem_green",
 "speed": 0.5
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0udms")
-}],
-"loop": true,
-"name": &"health",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -82,11 +74,19 @@ animations = [{
 "texture": SubResource("AtlasTexture_2yki7")
 }],
 "loop": true,
-"name": &"health_blue",
+"name": &"heart_blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0udms")
+}],
+"loop": true,
+"name": &"heart_red",
 "speed": 5.0
 }]
 
 [node name="item_icons" type="AnimatedSprite2D" unique_id=897164623]
 light_mask = 2
 sprite_frames = SubResource("SpriteFrames_08kqv")
-animation = &"health"
+animation = &"bomb_gray"
