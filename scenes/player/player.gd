@@ -13,7 +13,9 @@ const DELAY := 0.1/SPEED*0 # TODO - change back to 0.1 when done testing?
 var inventory = GlobalItem.inv
 var moving := false
 var sprite_start_y := 0.0
-var health
+
+
+@onready var gv = global_vars
 
 var iso_dirs := {
 	"right": Vector2(TILE_W / 2.0, TILE_H / 2.0),
@@ -24,7 +26,7 @@ var iso_dirs := {
 
 func _ready() -> void:
 	sprite_start_y = sprite.position.y
-	health = 10
+	#gv.playerHealth = 10
 
 
 
@@ -42,11 +44,14 @@ func _physics_process(_delta: float) -> void:
 
 func get_pressed_direction() -> String:
 	if Input.is_action_pressed("right"):
+		gv.playerHealth += 1
+		print(gv.playerHealth)
 		return "right"
-		health += 1
+
 	elif Input.is_action_pressed("left"):
+		gv.playerHealth -= 1
+		print(gv.playerHealth)
 		return "left"
-		health -= 1
 	elif Input.is_action_pressed("up"):
 		return "up"
 	elif Input.is_action_pressed("down"):

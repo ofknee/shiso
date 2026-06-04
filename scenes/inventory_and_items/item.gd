@@ -41,5 +41,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		if inventory.size() <= 10:
 			inventory.append(item)
-			hide()
+			queue_free()
 		

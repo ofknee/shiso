@@ -17,10 +17,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if index <= (inventory.size()-1):
-		if inventory[index] != item: #TODO autosize inventory --> one if ?
+		if !item: #TODO autosize inventory --> one if ?
 			item = inventory[index]
 			icon.show() 
 			icon.play(item.type)
+			
 			
 
 			#icon.play(item.type)#FIXME
@@ -31,6 +32,8 @@ func _process(_delta: float) -> void:
 			var inventory_output = ""
 			for i in inventory.size(): inventory_output += inventory[i].type + " · " 
 			print(inventory_output)
+	else:
+		icon.hide()
 
 
 func _on_texture_button_mouse_entered() -> void:

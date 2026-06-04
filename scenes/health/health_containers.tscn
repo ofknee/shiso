@@ -33,7 +33,7 @@ animations = [{
 [node name="container" type="CenterContainer" unique_id=1383844476]
 script = ExtResource("1_1oedo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2039661610]
+[node name="stateAnim" type="AnimatedSprite2D" parent="." unique_id=2039661610]
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_dcyya")
-animation = &"full"
+animation = &"empty"
