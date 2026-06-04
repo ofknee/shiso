@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://7glennwisk38"]
+
+[ext_resource type="PackedScene" uid="uid://brtj88ut4n156" path="res://scenes/map/tilemap.tscn" id="1_6t4g7"]
+[ext_resource type="PackedScene" uid="uid://dnp5ixa5ugvoa" path="res://scenes/player/player.tscn" id="2_th32y"]
+[ext_resource type="PackedScene" uid="uid://cmgub0scvvn2l" path="res://scenes/inventory_and_items/inventory.tscn" id="3_btprj"]
+[ext_resource type="PackedScene" uid="uid://lkkk4uqr4ts6" path="res://scenes/health/health.tscn" id="4_q15ru"]
+[ext_resource type="Texture2D" uid="uid://ce3wk5s5xmbxr" path="res://assets/ui/bg.png" id="5_8ygm7"]
+
+[node name="main" type="Node2D" unique_id=1057238897]
+y_sort_enabled = true
+
+[node name="tilemap" parent="." unique_id=2034127134 instance=ExtResource("1_6t4g7")]
+z_index = -1
+
+[node name="player" parent="." unique_id=221897951 instance=ExtResource("2_th32y")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(0, -1)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=753560101]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 4.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_bottom_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=290021092]
+
+[node name="inventory" parent="CanvasLayer" unique_id=371081491 instance=ExtResource("3_btprj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 132.0
+offset_top = 248.0
+offset_right = 504.0
+offset_bottom = 312.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="health" parent="CanvasLayer" unique_id=1150688311 instance=ExtResource("4_q15ru")]
+
+[node name="background" type="Node2D" parent="." unique_id=2029383595]
+
+[node name="Parallax2D2" type="Parallax2D" parent="background" unique_id=1256283199]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(160, 80)
+repeat_times = 5
+
+[node name="bg" type="Sprite2D" parent="background/Parallax2D2" unique_id=1039197192]
+z_index = -10
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_8ygm7")
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="background" unique_id=1745519529]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(320, 160)
+repeat_times = 5
+
+[node name="bg" type="Sprite2D" parent="background/Parallax2D" unique_id=842404259]
+modulate = Color(0.58410585, 0.58410585, 0.58410585, 0.72156864)
+z_index = -10
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_8ygm7")
+centered = false

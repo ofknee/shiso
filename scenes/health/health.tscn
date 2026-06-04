@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://lkkk4uqr4ts6"]
+
+[ext_resource type="PackedScene" uid="uid://b8hg35rlc4wq5" path="res://scenes/health/health_containers.tscn" id="1_5e2k1"]
+
+[node name="health" type="Control" unique_id=1150688311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=497823015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=71865859]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 13
+
+[node name="c0" parent="MarginContainer/HBoxContainer" unique_id=1383844476 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c1" parent="MarginContainer/HBoxContainer" unique_id=263389418 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c2" parent="MarginContainer/HBoxContainer" unique_id=1151317769 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c3" parent="MarginContainer/HBoxContainer" unique_id=934376507 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c4" parent="MarginContainer/HBoxContainer" unique_id=2079061301 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c5" parent="MarginContainer/HBoxContainer" unique_id=92370964 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c6" parent="MarginContainer/HBoxContainer" unique_id=1944955340 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c7" parent="MarginContainer/HBoxContainer" unique_id=1421367697 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c8" parent="MarginContainer/HBoxContainer" unique_id=1167216076 instance=ExtResource("1_5e2k1")]
+layout_mode = 2
+
+[node name="c9" parent="MarginContainer/HBoxContainer" unique_id=835786905 instance=ExtResource("1_5e2k1")]
+layout_mode = 2

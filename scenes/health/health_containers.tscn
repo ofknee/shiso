@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b8hg35rlc4wq5"]
+
+[ext_resource type="Script" uid="uid://yrv8mugq3s5j" path="res://scenes/health/health_containers.gd" id="1_1oedo"]
+[ext_resource type="Texture2D" uid="uid://croowb1h1obu1" path="res://assets/ui/systems/health/health-spritesheet.png" id="1_8ay6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ml1f"]
+atlas = ExtResource("1_8ay6v")
+region = Rect2(5, 0, 4, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vte2"]
+atlas = ExtResource("1_8ay6v")
+region = Rect2(0, 0, 4, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcyya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ml1f")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vte2")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[node name="container" type="CenterContainer" unique_id=1383844476]
+script = ExtResource("1_1oedo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2039661610]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_dcyya")
+animation = &"full"

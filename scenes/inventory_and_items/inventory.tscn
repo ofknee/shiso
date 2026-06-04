@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cmgub0scvvn2l"]
+
+[ext_resource type="PackedScene" uid="uid://mr7x0yixrmho" path="res://scenes/inventory_and_items/inventory_slot.tscn" id="1_qw0r6"]
+
+[node name="inventory" type="MarginContainer" unique_id=371081491]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=212783834]
+custom_minimum_size = Vector2(320, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+
+[node name="inventory_slot_1" parent="HBoxContainer" unique_id=1996084076 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_2" parent="HBoxContainer" unique_id=1790220444 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_3" parent="HBoxContainer" unique_id=332530127 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_4" parent="HBoxContainer" unique_id=2124555447 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_5" parent="HBoxContainer" unique_id=1841223494 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_6" parent="HBoxContainer" unique_id=1416745633 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_7" parent="HBoxContainer" unique_id=1716959348 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_8" parent="HBoxContainer" unique_id=1774996916 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_9" parent="HBoxContainer" unique_id=1332592308 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
+
+[node name="inventory_slot_10" parent="HBoxContainer" unique_id=998307945 instance=ExtResource("1_qw0r6")]
+layout_mode = 2
