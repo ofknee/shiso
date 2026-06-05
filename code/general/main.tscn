@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://7glennwisk38"]
 
-[ext_resource type="PackedScene" uid="uid://brtj88ut4n156" path="res://scenes/map/tilemap.tscn" id="1_6t4g7"]
-[ext_resource type="PackedScene" uid="uid://dnp5ixa5ugvoa" path="res://scenes/player/player.tscn" id="2_th32y"]
-[ext_resource type="PackedScene" uid="uid://cmgub0scvvn2l" path="res://scenes/inventory_and_items/inventory.tscn" id="3_btprj"]
-[ext_resource type="PackedScene" uid="uid://lkkk4uqr4ts6" path="res://scenes/health/health.tscn" id="4_q15ru"]
+[ext_resource type="PackedScene" uid="uid://brtj88ut4n156" path="res://code/map/tilemap.tscn" id="1_6t4g7"]
+[ext_resource type="PackedScene" uid="uid://dnp5ixa5ugvoa" path="res://code/player/player.tscn" id="2_th32y"]
+[ext_resource type="PackedScene" uid="uid://cmgub0scvvn2l" path="res://code/inventory_and_items/inventory.tscn" id="3_btprj"]
+[ext_resource type="PackedScene" uid="uid://lkkk4uqr4ts6" path="res://code/health/health.tscn" id="4_q15ru"]
 [ext_resource type="Texture2D" uid="uid://ce3wk5s5xmbxr" path="res://assets/ui/bg.png" id="5_8ygm7"]
 
 [node name="main" type="Node2D" unique_id=1057238897]
@@ -31,6 +31,8 @@ editor_draw_drag_margin = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=290021092]
 
+[node name="health" parent="CanvasLayer" unique_id=1150688311 instance=ExtResource("4_q15ru")]
+
 [node name="inventory" parent="CanvasLayer" unique_id=371081491 instance=ExtResource("3_btprj")]
 anchors_preset = 0
 anchor_right = 0.0
@@ -41,8 +43,6 @@ offset_right = 504.0
 offset_bottom = 312.0
 grow_horizontal = 1
 grow_vertical = 1
-
-[node name="health" parent="CanvasLayer" unique_id=1150688311 instance=ExtResource("4_q15ru")]
 
 [node name="background" type="Node2D" parent="." unique_id=2029383595]
 

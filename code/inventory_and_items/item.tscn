@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dyfkuaf6jvl52"]
 
-[ext_resource type="Script" uid="uid://dqivf0h6gjv1p" path="res://scenes/inventory_and_items/item.gd" id="1_6muww"]
+[ext_resource type="Script" uid="uid://dqivf0h6gjv1p" path="res://code/inventory_and_items/item.gd" id="1_6muww"]
 [ext_resource type="Texture2D" uid="uid://cineb437jv5op" path="res://icon.svg" id="2_ro5b8"]
-[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://scenes/player/shadow.tscn" id="2_vljjh"]
-[ext_resource type="PackedScene" uid="uid://dfdu8d65ehcg0" path="res://scenes/inventory_and_items/item_icons.tscn" id="4_vljjh"]
+[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://code/player/shadow.tscn" id="2_vljjh"]
+[ext_resource type="PackedScene" uid="uid://dfdu8d65ehcg0" path="res://code/inventory_and_items/item_icons.tscn" id="4_vljjh"]
 
 [sub_resource type="Gradient" id="Gradient_6muww"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)

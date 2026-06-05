@@ -11,6 +11,7 @@ var item = GlobalItem.new()
 @onready var anim = $item_icons
 @onready var og_pos = anim.get_position()
 
+
 func _ready() -> void:
 	#var types = GlobalItem.INFO.keys()
 	item.computah_randomize_it_pls()
@@ -18,7 +19,7 @@ func _ready() -> void:
 	#print("hi")
 	anim.play(item.type)
 	#print(item.type + "...")
-	print(anim.animation)
+	#print(anim.animation)
 
 	#add_to_group("items") 
 

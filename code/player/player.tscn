@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnp5ixa5ugvoa"]
 
 [ext_resource type="Texture2D" uid="uid://cineb437jv5op" path="res://icon.svg" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://25ak4aoqcl2n" path="res://scenes/player/player.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://25ak4aoqcl2n" path="res://code/player/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://cr8gphajy5fwv" path="res://assets/player/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_g2els"]
-[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://scenes/player/shadow.tscn" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://code/player/shadow.tscn" id="4_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 2.0

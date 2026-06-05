@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmgub0scvvn2l"]
 
-[ext_resource type="PackedScene" uid="uid://mr7x0yixrmho" path="res://scenes/inventory_and_items/inventory_slot.tscn" id="1_qw0r6"]
+[ext_resource type="PackedScene" uid="uid://mr7x0yixrmho" path="res://code/inventory_and_items/inventory_slot.tscn" id="1_qw0r6"]
 
 [node name="inventory" type="MarginContainer" unique_id=371081491]
 anchors_preset = 15

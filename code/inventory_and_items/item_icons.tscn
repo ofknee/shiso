@@ -1,33 +1,33 @@
 [gd_scene format=3 uid="uid://dfdu8d65ehcg0"]
 
-[ext_resource type="Texture2D" uid="uid://bxhtpk2qy38wf" path="res://assets/ui/powers:inventory/items16x16.png" id="1_umqch"]
+[ext_resource type="Texture2D" uid="uid://bxhtpk2qy38wf" path="res://assets/ui/powers:inventory/items16x16.png" id="1_svkdq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umqch"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(39, 40, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_me1pa"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(0, 40, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8kra"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(52, 40, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwjes"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(13, 40, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5vp5n"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(52, 53, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2yki7"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(13, 53, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0udms"]
-atlas = ExtResource("1_umqch")
+atlas = ExtResource("1_svkdq")
 region = Rect2(0, 53, 13, 13)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_08kqv"]
@@ -77,4 +77,4 @@ animations = [{
 [node name="item_icons" type="AnimatedSprite2D" unique_id=897164623]
 light_mask = 2
 sprite_frames = SubResource("SpriteFrames_08kqv")
-animation = &"gem_blue"
+animation = &"heart_red"

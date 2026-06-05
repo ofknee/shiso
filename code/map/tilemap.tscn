@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://brtj88ut4n156"]
 
-[ext_resource type="Script" uid="uid://rvooq2ijlnno" path="res://scenes/map/tilemap.gd" id="1_38yc0"]
+[ext_resource type="Script" uid="uid://rvooq2ijlnno" path="res://code/map/tilemap.gd" id="1_38yc0"]
 [ext_resource type="Texture2D" uid="uid://b75p4ojwg3n5q" path="res://assets/map/tinyBlocks_NOiL.png" id="1_55lsm"]
-[ext_resource type="Script" uid="uid://c66y06md13an3" path="res://scenes/map/level_0.gd" id="3_fofut"]
-[ext_resource type="PackedScene" uid="uid://dyfkuaf6jvl52" path="res://scenes/inventory_and_items/item.tscn" id="3_i8yab"]
+[ext_resource type="Script" uid="uid://c66y06md13an3" path="res://code/map/level_0.gd" id="3_fofut"]
+[ext_resource type="PackedScene" uid="uid://dyfkuaf6jvl52" path="res://code/inventory_and_items/item.tscn" id="3_i8yab"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38yc0"]
 texture = ExtResource("1_55lsm")
