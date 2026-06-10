@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca32tw6gq81yr"
-path="res://.godot/imported/goldcoin_05.png-559d6a3312c8bb929e80513ec7fbe618.ctex"
+uid="uid://bju7wd4ccitwv"
+path="res://.godot/imported/inventory_slot.png-fdf272a2881ed94bda597ed34fc02383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/systems/powers:inventory/coin/goldcoin_05.png"
-dest_files=["res://.godot/imported/goldcoin_05.png-559d6a3312c8bb929e80513ec7fbe618.ctex"]
+source_file="res://assets/ui/systems/inventory/inventory_slot.png"
+dest_files=["res://.godot/imported/inventory_slot.png-fdf272a2881ed94bda597ed34fc02383.ctex"]
 
 [params]
 

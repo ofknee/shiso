@@ -1,7 +1,7 @@
 extends Node
 var playerHealth:= 10
 var coins := 0
-@onready var coins_text = $"GUI/coins/coinsValue"
+#@onready var coins_text = $"GUI/coins/coinsValue"
 
 #var score := 0
 
@@ -14,5 +14,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	playerHealth = clamp(playerHealth,0,10)
-	coins_text = str(coins)
+	#coins_text = str(coins)
 	

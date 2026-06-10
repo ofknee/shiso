@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lpp38gpjktwo"
-path="res://.godot/imported/inventory_slot_click.png-bab72eba5f9ae4f8d518e12ec2257a41.ctex"
+uid="uid://c5hidl0aikqbe"
+path="res://.godot/imported/New Piskel.png-e96619a986dedcd94980a0afae657d80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/systems/powers:inventory/inventory_slot_click.png"
-dest_files=["res://.godot/imported/inventory_slot_click.png-bab72eba5f9ae4f8d518e12ec2257a41.ctex"]
+source_file="res://assets/ui/systems/inventory/coin/New Piskel.png"
+dest_files=["res://.godot/imported/New Piskel.png-e96619a986dedcd94980a0afae657d80.ctex"]
 
 [params]
 

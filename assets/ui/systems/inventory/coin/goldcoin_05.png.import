@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brbm6ehxi3djm"
-path="res://.godot/imported/goldcoin_00.png-3846a464fce7c93425c324273fe6fa14.ctex"
+uid="uid://ca32tw6gq81yr"
+path="res://.godot/imported/goldcoin_05.png-896a3b6d589f6276676d6fd74821f6e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/systems/powers:inventory/coin/goldcoin_00.png"
-dest_files=["res://.godot/imported/goldcoin_00.png-3846a464fce7c93425c324273fe6fa14.ctex"]
+source_file="res://assets/ui/systems/inventory/coin/goldcoin_05.png"
+dest_files=["res://.godot/imported/goldcoin_05.png-896a3b6d589f6276676d6fd74821f6e4.ctex"]
 
 [params]
 
