@@ -38,10 +38,11 @@ folder_colors={
 "res://assets/": "pink",
 "res://code/": "blue",
 "res://code/general/": "purple",
-"res://code/health/": "red",
 "res://code/inventory_and_items/": "teal",
 "res://code/map/": "yellow",
-"res://code/player/": "pink"
+"res://code/player/": "pink",
+"res://code/systems/coins/": "orange",
+"res://code/systems/health/": "red"
 }
 
 [gui]

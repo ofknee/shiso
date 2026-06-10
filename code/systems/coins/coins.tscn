@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://esr3cfo8pa2o"]
+
+[ext_resource type="Texture2D" uid="uid://c5hidl0aikqbe" path="res://assets/ui/systems/powers:inventory/coin/New Piskel.png" id="1_82v01"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqcrh"]
+atlas = ExtResource("1_82v01")
+region = Rect2(0, 14, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqg0h"]
+atlas = ExtResource("1_82v01")
+region = Rect2(14, 14, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cmbh"]
+atlas = ExtResource("1_82v01")
+region = Rect2(28, 14, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a51x0"]
+atlas = ExtResource("1_82v01")
+region = Rect2(0, 28, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pehu1"]
+atlas = ExtResource("1_82v01")
+region = Rect2(14, 28, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y723r"]
+atlas = ExtResource("1_82v01")
+region = Rect2(28, 28, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iijnf"]
+atlas = ExtResource("1_82v01")
+region = Rect2(0, 42, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2d3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqcrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqg0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cmbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a51x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pehu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y723r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqcrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqg0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cmbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a51x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pehu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y723r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iijnf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="coins" type="Control" unique_id=1487108174]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="coinsValue" type="RichTextLabel" parent="." unique_id=349010036]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 99.0
+offset_bottom = 40.0
+text = "testing"
+
+[node name="coinsIcon" type="AnimatedSprite2D" parent="." unique_id=2000760898]
+position = Vector2(9, 12)
+sprite_frames = SubResource("SpriteFrames_n2d3o")
+frame = 12
+frame_progress = 1.0

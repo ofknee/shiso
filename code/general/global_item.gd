@@ -37,3 +37,13 @@ func computah_randomize_it_pls():
 		
 	
 #get not ()
+
+
+func use() -> void:
+	var effect = INFO[type]["stats"]["effect"]
+	match effect["id"]:
+		"health":
+			global_vars.playerHealth += effect["amount"]
+		"money":
+			global_vars.coins += effect["amount"]
+		

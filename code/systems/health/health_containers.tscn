@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8hg35rlc4wq5"]
 
-[ext_resource type="Script" uid="uid://yrv8mugq3s5j" path="res://code/health/health_containers.gd" id="1_1oedo"]
+[ext_resource type="Script" uid="uid://yrv8mugq3s5j" path="res://code/systems/health/health_containers.gd" id="1_1oedo"]
 [ext_resource type="Texture2D" uid="uid://croowb1h1obu1" path="res://assets/ui/systems/health/health-spritesheet.png" id="1_8ay6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ml1f"]

@@ -41,6 +41,7 @@ func _process(_delta: float) -> void:
 
 
 func use_item() -> void:
+	item.use()
 	inventory.remove_at(index)
 	if item:
 		icon.play(item.type)

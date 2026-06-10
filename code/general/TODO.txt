@@ -17,3 +17,6 @@ use for other thing maybe like enemy health
 E 0:00:00:772   get_frame_count: Animation 'health_blue' doesn't exist.
   <C++ Error>   Condition "!E" is true. Returning: 0
   <C++ Source>  scene/resources/sprite_frames.cpp:71 @ get_frame_count() ------ fixed!!! :P
+
+
+candyland wow

@@ -9,19 +9,6 @@ enum rarity {
 }
 
 const INFO: Dictionary = {
-	#"bomb_gray" : { feeling lazy, too much to code rn lol
-		#"name" : "Bomb",
-		#"desc" : "highly volatile",
-		#"stats" : {
-			#"use" : "kaboom",
-			#"effect" : {
-				#"id" : "",
-				#"amount" : 0
-			#},
-			#"value" : 50,
-			#"weight" : rarity.UNCOMMON,
-			#"rarity_desc" : "meh"
-		#}},
 	"gem_blue" : {
 		"name" : "Diamond",
 		"desc" : "looks like money",
@@ -48,7 +35,7 @@ const INFO: Dictionary = {
 			},
 			"value" : 50,
 			"weight" : rarity.COMMON,
-			"rarity" : "don't worry abt it..."
+			"rarity_desc" : "don't worry abt it..."
 		}},
 	"heart_red" : {
 		"name" : "Heart",
