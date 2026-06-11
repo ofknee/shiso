@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5hidl0aikqbe" path="res://assets/ui/systems/inventory/coin/New Piskel.png" id="1_82v01"]
 [ext_resource type="Script" uid="uid://ci82w0uftkbyj" path="res://code/systems/coins/coins.gd" id="1_rqcrh"]
+[ext_resource type="FontFile" uid="uid://byk714t42fyj1" path="res://assets/ui/font/c_c_red_alert_inet/C&C Red Alert [INET].ttf" id="2_cqg0h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqcrh"]
 atlas = ExtResource("1_82v01")
@@ -88,8 +89,15 @@ script = ExtResource("1_rqcrh")
 [node name="coinsValue" type="RichTextLabel" parent="." unique_id=349010036]
 layout_mode = 0
 offset_left = 20.0
+offset_top = 2.0
 offset_right = 99.0
-offset_bottom = 40.0
+offset_bottom = 42.0
+theme_override_colors/font_shadow_color = Color(0.6058601, 0.30341423, 9.62615e-08, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("2_cqg0h")
+theme_override_font_sizes/normal_font_size = 18
 text = "0"
 scroll_active = false
 
