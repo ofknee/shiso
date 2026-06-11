@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bx4bedn7df6jl"]
 
-[ext_resource type="Script" uid="uid://dswhwfsuc8q81" path="res://enemy.gd" id="1_t8q5k"]
+[ext_resource type="Script" uid="uid://dswhwfsuc8q81" path="res://code/player/enemy.gd" id="1_t8q5k"]
 [ext_resource type="Texture2D" uid="uid://c3nle3u51abio" path="res://assets/misc/enemy.png" id="2_lw0vy"]
 [ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://code/player/shadow.tscn" id="3_lw0vy"]
 

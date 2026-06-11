@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://brtj88ut4n156" path="res://code/map/tilemap.tscn" id="1_6t4g7"]
 [ext_resource type="PackedScene" uid="uid://dnp5ixa5ugvoa" path="res://code/player/player.tscn" id="2_th32y"]
 [ext_resource type="PackedScene" uid="uid://fxk3gtb2cgk2" path="res://code/general/gui.tscn" id="3_ie4wn"]
+[ext_resource type="AudioStream" uid="uid://pgsmm4gqp405" path="res://assets/sound/bg_music/government_funding.mp3" id="5_6im14"]
 [ext_resource type="Texture2D" uid="uid://ce3wk5s5xmbxr" path="res://assets/ui/bg/bg.png" id="6_im1ul"]
 
 [node name="main" type="Node2D" unique_id=1057238897]
@@ -54,3 +55,9 @@ z_index = -10
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_im1ul")
 centered = false
+
+[node name="bgmusic" type="AudioStreamPlayer" parent="." unique_id=372154909]
+unique_name_in_owner = true
+stream = ExtResource("5_6im14")
+pitch_scale = 1.3
+autoplay = true
