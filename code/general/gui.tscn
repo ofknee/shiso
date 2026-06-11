@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://fxk3gtb2cgk2"]
+
+[ext_resource type="PackedScene" uid="uid://lkkk4uqr4ts6" path="res://code/systems/health/health.tscn" id="1_fsfx0"]
+[ext_resource type="PackedScene" uid="uid://cmgub0scvvn2l" path="res://code/inventory_and_items/inventory.tscn" id="2_uoh32"]
+[ext_resource type="PackedScene" uid="uid://esr3cfo8pa2o" path="res://code/systems/coins/coins.tscn" id="3_uoh32"]
+
+[node name="GUI" type="CanvasLayer" unique_id=1658835436]
+
+[node name="health" parent="." unique_id=1150688311 instance=ExtResource("1_fsfx0")]
+
+[node name="inventory" parent="." unique_id=371081491 instance=ExtResource("2_uoh32")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 132.0
+offset_top = 248.0
+offset_right = 504.0
+offset_bottom = 312.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="coins" parent="." unique_id=1487108174 instance=ExtResource("3_uoh32")]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 156.0
+offset_top = 5.0
+offset_right = 156.0
+offset_bottom = 5.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+metadata/_edit_use_anchors_ = true

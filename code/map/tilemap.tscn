@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b75p4ojwg3n5q" path="res://assets/map/tinyBlocks_NOiL.png" id="1_55lsm"]
 [ext_resource type="Script" uid="uid://c66y06md13an3" path="res://code/map/level_0.gd" id="3_fofut"]
 [ext_resource type="PackedScene" uid="uid://dyfkuaf6jvl52" path="res://code/inventory_and_items/item.tscn" id="3_i8yab"]
+[ext_resource type="PackedScene" uid="uid://bx4bedn7df6jl" path="res://code/player/enemy.tscn" id="4_dfyvw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38yc0"]
 texture = ExtResource("1_55lsm")
@@ -198,13 +199,15 @@ texture_region_size = Vector2i(18, 18)
 resource_name = "item"
 scenes/1/scene = ExtResource("3_i8yab")
 scenes/1/display_placeholder = true
+scenes/2/scene = ExtResource("4_dfyvw")
+scenes/2/display_placeholder = true
 
 [sub_resource type="TileSet" id="TileSet_fofut"]
 tile_shape = 1
 tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(18, 9)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_38yc0")
 sources/1 = SubResource("TileSetScenesCollectionSource_v3dip")
 
@@ -220,7 +223,12 @@ script = ExtResource("3_fofut")
 
 [node name="items" type="TileMapLayer" parent="." unique_id=257840789]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAAEAAQAAAAAAAQD///v/AQAAAAAAAQD6//7/AQAAAAAAAQD+/wUAAQAAAAAAAQD5/zYAAQAAAAAAAQD5/z4AAQAAAAAAAQDx/zYAAQAAAAAAAQABADYAAQAAAAAAAQD1/ygAAQAAAAAAAQASAAcAAQAAAAAAAQD0/xIAAQAAAAAAAQANABkAAQAAAAAAAQAbAAkAAQAAAAAAAQAJAPL/AQAAAAAAAQDz//v/AQAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAFAAEAAQAAAAAAAQD///v/AQAAAAAAAQD6//7/AQAAAAAAAQD+/wUAAQAAAAAAAQDx/zYAAQAAAAAAAQABADYAAQAAAAAAAQD1/ygAAQAAAAAAAQASAAcAAQAAAAAAAQD0/xIAAQAAAAAAAQANABkAAQAAAAAAAQAbAAkAAQAAAAAAAQAJAPL/AQAAAAAAAQDz//v/AQAAAAAAAQD4/zYAAQAAAAAAAQD6/zYAAQAAAAAAAQD7/zYAAQAAAAAAAgD2/zgAAQAAAAAAAgD1/zUAAQAAAAAAAgD9/zgAAQAAAAAAAgD0/xMAAQAAAAAAAQD0/xEAAQAAAAAAAQDx/zUAAQAAAAAAAQABADcAAQAAAAAAAQABADUAAQAAAAAAAQDx/zcAAQAAAAAAAQD4/z4AAQAAAAAAAQD6/z4AAQAAAAAAAQA=")
+tile_set = SubResource("TileSet_fofut")
+
+[node name="enemies" type="TileMapLayer" parent="." unique_id=34445920]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACACoAAQAAAAAAAgAEACkAAQAAAAAAAgD3/zYAAQAAAAAAAgD2/xIAAQAAAAAAAgD8/zUAAQAAAAAAAgD//zgAAQAAAAAAAgD0/zkAAQAAAAAAAgD5/yQAAQAAAAAAAgD1/xUAAQAAAAAAAgDz/w0AAQAAAAAAAgDy/xcAAQAAAAAAAgD5/xYAAQAAAAAAAgD5/zQAAQAAAAAAAgD5/w4AAQAAAAAAAgD1/wwAAQAAAAAAAgDx/w8AAQAAAAAAAgD2/w8AAQAAAAAAAgD1/xkAAQAAAAAAAgDy/zkAAQAAAAAAAgDy/zYAAQAAAAAAAgDy/zMAAQAAAAAAAgAAADkAAQAAAAAAAgAAADYAAQAAAAAAAgAAADMAAQAAAAAAAgA=")
 tile_set = SubResource("TileSet_fofut")
 
 [node name="level3" type="TileMapLayer" parent="." unique_id=234884053]
@@ -246,17 +254,25 @@ tile_set = SubResource("TileSet_fofut")
 y_sort_origin = 2
 
 [connection signal="body_entered" from="items/item" to="items/item" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295193" to="items/@Area2D@295193" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295194" to="items/@Area2D@295194" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295195" to="items/@Area2D@295195" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295196" to="items/@Area2D@295196" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295197" to="items/@Area2D@295197" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295198" to="items/@Area2D@295198" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295199" to="items/@Area2D@295199" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295200" to="items/@Area2D@295200" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295201" to="items/@Area2D@295201" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295202" to="items/@Area2D@295202" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295203" to="items/@Area2D@295203" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295204" to="items/@Area2D@295204" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295205" to="items/@Area2D@295205" method="_on_body_entered"]
-[connection signal="body_entered" from="items/@Area2D@295206" to="items/@Area2D@295206" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500980" to="items/@Area2D@500980" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500981" to="items/@Area2D@500981" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500982" to="items/@Area2D@500982" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500983" to="items/@Area2D@500983" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500984" to="items/@Area2D@500984" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500985" to="items/@Area2D@500985" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500986" to="items/@Area2D@500986" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500987" to="items/@Area2D@500987" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500988" to="items/@Area2D@500988" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500989" to="items/@Area2D@500989" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500990" to="items/@Area2D@500990" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500991" to="items/@Area2D@500991" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500992" to="items/@Area2D@500992" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500993" to="items/@Area2D@500993" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500997" to="items/@Area2D@500997" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500998" to="items/@Area2D@500998" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@500999" to="items/@Area2D@500999" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@501000" to="items/@Area2D@501000" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@501001" to="items/@Area2D@501001" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@501002" to="items/@Area2D@501002" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@501003" to="items/@Area2D@501003" method="_on_body_entered"]
+[connection signal="body_entered" from="items/@Area2D@501004" to="items/@Area2D@501004" method="_on_body_entered"]

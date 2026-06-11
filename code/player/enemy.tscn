@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bx4bedn7df6jl"]
+
+[ext_resource type="Script" uid="uid://dswhwfsuc8q81" path="res://enemy.gd" id="1_t8q5k"]
+[ext_resource type="Texture2D" uid="uid://c3nle3u51abio" path="res://assets/misc/enemy.png" id="2_lw0vy"]
+[ext_resource type="PackedScene" uid="uid://b1d1x2mdx68u7" path="res://code/player/shadow.tscn" id="3_lw0vy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8p45"]
+radius = 2.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lw0vy"]
+radius = 2.0
+height = 4.0
+
+[node name="enemy" type="CharacterBody2D" unique_id=1972003671]
+z_index = 2
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_t8q5k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1473164490]
+collision_layer = 8
+
+[node name="coll" type="CollisionShape2D" parent="Area2D" unique_id=2079679022]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_u8p45")
+debug_color = Color(0.9573247, 0, 0.53579354, 0.41960785)
+
+[node name="main_sprites" type="Node2D" parent="." unique_id=2031190673]
+z_index = 1
+position = Vector2(0, -3.52)
+scale = Vector2(0.8, 0.8)
+
+[node name="layer1" type="Sprite2D" parent="main_sprites" unique_id=1275370093]
+modulate = Color(1, 1, 1, 0.76862746)
+texture = ExtResource("2_lw0vy")
+region_enabled = true
+region_rect = Rect2(27, 0, 9, 9)
+
+[node name="layer2" type="Sprite2D" parent="main_sprites" unique_id=1969296556]
+modulate = Color(1, 1, 1, 0.7176471)
+texture = ExtResource("2_lw0vy")
+region_enabled = true
+region_rect = Rect2(18, 0, 9, 9)
+
+[node name="layer3" type="Sprite2D" parent="main_sprites" unique_id=607257350]
+modulate = Color(1, 1, 1, 0.6784314)
+texture = ExtResource("2_lw0vy")
+region_enabled = true
+region_rect = Rect2(9, 0, 9, 9)
+
+[node name="layer4" type="Sprite2D" parent="main_sprites" unique_id=876025040]
+modulate = Color(1, 1, 1, 0.6862745)
+texture = ExtResource("2_lw0vy")
+region_enabled = true
+region_rect = Rect2(0, 0, 9, 9)
+
+[node name="player_coll" type="CollisionShape2D" parent="." unique_id=1620678894]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_lw0vy")
+debug_color = Color(0, 0.5335598, 0.9807494, 0.41960785)
+
+[node name="shadow" parent="." unique_id=827207887 instance=ExtResource("3_lw0vy")]
+z_index = 1
+z_as_relative = false
+position = Vector2(0.49999997, -1.2500002)
+scale = Vector2(0.49999997, 0.62499994)
+
+[node name="Shadow" parent="shadow" index="0" unique_id=2025288872]
+visible = false
+
+[node name="Shadow2" parent="shadow" index="1" unique_id=1774471022]
+scale = Vector2(1.575, 0.9)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="shadow"]

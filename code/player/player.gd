@@ -15,7 +15,7 @@ var moving := false
 var sprite_start_y := 0.0
 
 
-@onready var gv = global_vars
+#@onready var gv = global_vars # TESTING PURPOSES ONLY
 
 var iso_dirs := {
 	"right": Vector2(TILE_W / 2.0, TILE_H / 2.0),
@@ -44,13 +44,13 @@ func _physics_process(_delta: float) -> void:
 
 func get_pressed_direction() -> String:
 	if Input.is_action_pressed("right"):
-		gv.playerHealth += 1
-		print(gv.playerHealth)
+		#gv.playerHealth += 1 # TESTING PURPOSES ONLY
+		#print(gv.playerHealth) # TESTING PURPOSES ONLY
 		return "right"
 
 	elif Input.is_action_pressed("left"):
-		gv.playerHealth -= 1
-		print(gv.playerHealth)
+		#gv.playerHealth -= 1 TESTING PURPOSES ONLY
+		#print(gv.playerHealth) # TESTING PURPOSES ONLY
 		return "left"
 	elif Input.is_action_pressed("up"):
 		return "up"

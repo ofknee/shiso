@@ -2,25 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bxhtpk2qy38wf" path="res://assets/ui/systems/inventory/items16x16.png" id="1_svkdq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_umqch"]
-atlas = ExtResource("1_svkdq")
-region = Rect2(39, 40, 13, 13)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_me1pa"]
 atlas = ExtResource("1_svkdq")
 region = Rect2(0, 40, 13, 13)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8kra"]
-atlas = ExtResource("1_svkdq")
-region = Rect2(52, 40, 13, 13)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwjes"]
 atlas = ExtResource("1_svkdq")
 region = Rect2(13, 40, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5vp5n"]
-atlas = ExtResource("1_svkdq")
-region = Rect2(52, 53, 13, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2yki7"]
 atlas = ExtResource("1_svkdq")
@@ -34,9 +22,6 @@ region = Rect2(0, 53, 13, 13)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_umqch")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_me1pa")
 }],
 "loop": true,
@@ -45,9 +30,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x8kra")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_gwjes")
 }],
 "loop": true,
@@ -55,9 +37,6 @@ animations = [{
 "speed": 0.5
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5vp5n")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2yki7")
 }],
@@ -77,4 +56,4 @@ animations = [{
 [node name="item_icons" type="AnimatedSprite2D" unique_id=897164623]
 light_mask = 2
 sprite_frames = SubResource("SpriteFrames_08kqv")
-animation = &"heart_red"
+animation = &"gem_blue"

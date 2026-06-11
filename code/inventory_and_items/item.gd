@@ -25,11 +25,9 @@ func _ready() -> void:
 
 
 func _process(delta : float) -> void:
-	time += delta * frequency
-	bob = round(sin(time) * amplitude / rounding) * rounding
-	anim.set_position(og_pos + Vector2(0, bob))
 	#anim.play(item.type)#FIXME
 #	print("item.type" + item.type)
+	bobit(delta)
 
 
 pass # Replace with function body.
@@ -43,4 +41,10 @@ func _on_body_entered(body: Node2D) -> void:
 		if inventory.size() <= 10:
 			inventory.append(item)
 			queue_free()
+			
+func bobit(delta : float) -> void:
+	time += delta * frequency
+	bob = round(sin(time) * amplitude / rounding) * rounding
+	anim.set_position(og_pos + Vector2(0, bob))
+
 		

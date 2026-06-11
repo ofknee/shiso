@@ -43,10 +43,13 @@ texture = SubResource("GradientTexture2D_vljjh")
 modulate = Color(1, 1, 1, 0.77254903)
 light_mask = 2
 position = Vector2(0.5, -1.25)
-scale = Vector2(0.5, 0.625)
+scale = Vector2(0.67, 0.838)
 
 [node name="Shadow" parent="shadow" index="0" unique_id=2025288872]
 visible = false
+
+[node name="Shadow2" parent="shadow" index="1" unique_id=1774471022]
+scale = Vector2(1.5, 0.9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551262097]
 position = Vector2(0, -0.8000009)

@@ -2,9 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://brtj88ut4n156" path="res://code/map/tilemap.tscn" id="1_6t4g7"]
 [ext_resource type="PackedScene" uid="uid://dnp5ixa5ugvoa" path="res://code/player/player.tscn" id="2_th32y"]
-[ext_resource type="PackedScene" uid="uid://lkkk4uqr4ts6" path="res://code/systems/health/health.tscn" id="3_im1ul"]
-[ext_resource type="PackedScene" uid="uid://cmgub0scvvn2l" path="res://code/inventory_and_items/inventory.tscn" id="4_xobeu"]
-[ext_resource type="PackedScene" uid="uid://esr3cfo8pa2o" path="res://code/systems/coins/coins.tscn" id="5_oh7cp"]
+[ext_resource type="PackedScene" uid="uid://fxk3gtb2cgk2" path="res://code/general/gui.tscn" id="3_ie4wn"]
 [ext_resource type="Texture2D" uid="uid://ce3wk5s5xmbxr" path="res://assets/ui/bg/bg.png" id="6_im1ul"]
 
 [node name="main" type="Node2D" unique_id=1057238897]
@@ -30,23 +28,7 @@ drag_bottom_margin = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="GUI" type="CanvasLayer" parent="." unique_id=1367478152]
-
-[node name="health" parent="GUI" unique_id=1150688311 instance=ExtResource("3_im1ul")]
-
-[node name="inventory" parent="GUI" unique_id=371081491 instance=ExtResource("4_xobeu")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 132.0
-offset_top = 248.0
-offset_right = 504.0
-offset_bottom = 312.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="coins" parent="GUI" unique_id=1487108174 instance=ExtResource("5_oh7cp")]
-visible = false
+[node name="GUI" parent="." unique_id=1658835436 instance=ExtResource("3_ie4wn")]
 
 [node name="background" type="Node2D" parent="." unique_id=2029383595]
 

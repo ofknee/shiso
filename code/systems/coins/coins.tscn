@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://esr3cfo8pa2o"]
 
 [ext_resource type="Texture2D" uid="uid://c5hidl0aikqbe" path="res://assets/ui/systems/inventory/coin/New Piskel.png" id="1_82v01"]
+[ext_resource type="Script" uid="uid://ci82w0uftkbyj" path="res://code/systems/coins/coins.gd" id="1_rqcrh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqcrh"]
 atlas = ExtResource("1_82v01")
@@ -82,16 +83,25 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_rqcrh")
 
 [node name="coinsValue" type="RichTextLabel" parent="." unique_id=349010036]
 layout_mode = 0
 offset_left = 20.0
 offset_right = 99.0
 offset_bottom = 40.0
-text = "testing"
+text = "0"
+scroll_active = false
 
 [node name="coinsIcon" type="AnimatedSprite2D" parent="." unique_id=2000760898]
 position = Vector2(9, 12)
 sprite_frames = SubResource("SpriteFrames_n2d3o")
 frame = 12
 frame_progress = 1.0
+
+[node name="Label" type="Label" parent="." unique_id=59380100]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_right = 61.0
+offset_bottom = 49.0
