@@ -56,6 +56,8 @@ _but, of course, you’d never question the title, right?_
 *   most of the art uses assets save for modifications and tidbits like the coin (which spins but thats a secret for later) & the healthbar
 	
 *   the inventory system kept inventing new bugs i was not happy :((((
+  
+*	the help of ai was used in debugging movement 
 	
 
 **credits**
