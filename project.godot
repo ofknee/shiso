@@ -42,7 +42,8 @@ folder_colors={
 "res://code/map/": "yellow",
 "res://code/player/": "pink",
 "res://code/systems/coins/": "orange",
-"res://code/systems/health/": "red"
+"res://code/systems/health/": "red",
+"res://exports/": "orange"
 }
 
 [gui]
