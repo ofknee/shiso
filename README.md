@@ -1,6 +1,7 @@
-shiso
+![banner](https://github.com/ofknee/shiso/blob/main/assets/misc/flicks/title.png)
+# shiso
 
-cute web playable isometric game 
+cute [web playable](https://of-knee.itch.io/shiso) isometric game 
 
 **what??**
 ----------
@@ -18,6 +19,7 @@ you have two options:
 
 **how to play**
 ---------------
+https://of-knee.itch.io/shiso
 
 **avoid the evil red orbs** (definitely not inspired by the pesky little stardew valley insects) (the crossy road ripoff effect was 100% intentional fsfs ofc)
 
@@ -43,7 +45,7 @@ _we don’t question questionable game titles_
 
 but if we _were_ to quesiton this game’s title, this was originally supposed to a spaceship themed game and ship + isometric = shiso (ik im so creative)
 
-_but of course you’d never question the title, right?_
+_but, of course, you’d never question the title, right?_
 
 ### **other / random**
 
@@ -60,3 +62,10 @@ _but of course you’d never question the title, right?_
 -----------
 
 [tiles](https://dani-maccari.itch.io/tiny-blocks-isometric-pixel-assets) [music](https://kane-pixels-backrooms.fandom.com/wiki/Government_Funding) [character](https://axulart.itch.io/small-8-direction-characters) [items (modified)](https://knobiek.itch.io/items-16x16-free)
+
+**pics**
+-----------
+![demo-example](https://github.com/ofknee/shiso/blob/main/assets/misc/flicks/boop1.png)
+![demo-example](https://github.com/ofknee/shiso/blob/main/assets/misc/flicks/boop2.png)
+![demo-example](https://github.com/ofknee/shiso/blob/main/assets/misc/flicks/boop3.png)
+
